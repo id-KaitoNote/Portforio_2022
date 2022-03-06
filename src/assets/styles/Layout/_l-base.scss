@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.l-page {
+  position: relative;
+}
+
+.l-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.l-lg {
+  @include mq-down(sm) {
+    display: none !important;
+  }
+}
+
+.l-sm {
+  @include mq-up(lg) {
+    display: none !important;
+  }
+}

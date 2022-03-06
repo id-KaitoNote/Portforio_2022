@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@use './variables' as *;
+@use './mixin' as *;
+@use 'sass:map';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  @include fz(14, 26);
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $fontFamily;
+  color: map.get($map: $color, $key: text);
+  letter-spacing: 0.05em;
+  word-wrap: break-word;
+  background-color: map.get($map: $color, $key: text);
+  background-color: map.get($map: $color, $key: white);
+}
+
+a {
+  color: map.get($map: $color, $key: text);
+  text-decoration: none;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+picture {
+  display: block;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    word-break: break-all;
+  }
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-position: inside;
+}

@@ -1,0 +1,17 @@
+<%
+
+// dir
+const dir = './'
+
+const pageData = {
+  pageName: 'top',
+  title: 'title',
+  desc: 'description',
+  ogType: 'website'
+}
+
+%>
+
+<%- include (dir + 'inc/_head', {meta: pageData}) %>
+  <p>Hallow World.</p>
+<%- include (dir + 'inc/_footer', {meta: pageData}) %>

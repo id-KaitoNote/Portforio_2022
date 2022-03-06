@@ -1,0 +1,28 @@
+<%
+
+// dir
+const dir = './'
+
+// metaData
+const metaData = (typeof meta === 'undefined') ? '' : meta;
+
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title><%= metaData.title %></title>
+    <meta name="description" content="<%= metaData.desc %>">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="<%= metaData.ogType %>">
+    <meta property="og:title" content="<%= metaData.title %>">
+    <meta property="og:description" content="<%= metaData.desc %>">
+    <link rel="stylesheet" href="/assets/css/style.css?rev">
+  </head>
+  <body class="<%= metaData.pageName %>">
+    <div class="l-mainwrap">
+      <%- include (dir + '_header') %>

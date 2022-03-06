@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// breakpoint
+// ----------------------------------------------------------
+$breakpoint-up: (
+  'sm': 'screen and (min-width:640px)',
+  'md': 'screen and (min-width:768px)',
+  'xmd': 'screen and (min-width:1100px)',
+  'lg': 'screen and (min-width:1370px)',
+  'xlg': 'screen and (min-width:1430px)',
+) !default;
+
+$breakpoint-down: (
+  'sm': 'screen and (max-width:639px)',
+  'md': 'screen and (max-width:767px)',
+  'xmd': 'screen and (max-width:1099px)',
+  'lg': 'screen and (max-width:1369px)',
+) !default;
+
+// font
+// ----------------------------------------------------------
+$fontFamily: 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
+
+// color
+// ----------------------------------------------------------
+$color: (
+  white: #fff,
+  black: #000,
+);
+
+// 汎用easing
+// ----------------------------------------------------------
+$comMS: 400ms;
+$comES: ease;
