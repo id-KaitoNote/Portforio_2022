@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.about {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 160px;
+  }
+  &__term {
+    width: 25%;
+    @include fz(48, 56, 400);
+    @include tracking(200);
+    font-family: $fontFamilyMain;
+  }
+  &__desc {
+    width: calc(100% - 25%);
+    @include fz(16, 28, 400);
+  }
+}

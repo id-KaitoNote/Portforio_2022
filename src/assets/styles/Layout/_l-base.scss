@@ -3,8 +3,14 @@
 @use '../Foundation/variables' as *;
 @use '../Foundation/mixin' as *;
 
+.l-mainwrap {
+  width: 100%;
+  overflow-y: hidden;
+}
+
 .l-page {
   position: relative;
+  width: 100%;
 }
 
 .l-container {

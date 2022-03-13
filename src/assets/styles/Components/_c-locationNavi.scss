@@ -1,0 +1,48 @@
+@use '../Foundation/mixin' as *;
+@use '../Foundation/variables' as *;
+
+.c-locationNavi {
+  margin-top: 70px;
+  span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    @include notfirst() {
+      margin-top: 40px;
+    }
+    &[data-location='true'] {
+      background: $color-white;
+    }
+  }
+  &__number {
+    position: relative;
+    min-width: 75px;
+    min-height: 80px;
+    font-family: $fontFamilyMain;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      width: 90px;
+      height: 1px;
+      content: '';
+      background: $color-gray;
+      transform: rotate(-45deg);
+    }
+    span {
+      @include fz(30, 30, 400);
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:last-child {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+      }
+    }
+  }
+}

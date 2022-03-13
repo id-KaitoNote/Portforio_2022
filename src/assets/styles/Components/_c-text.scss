@@ -1,0 +1,23 @@
+@use '../Foundation/mixin' as *;
+@use '../Foundation/variables' as *;
+
+.c-text {
+  font-family: $fontFamilySub;
+  @include fz(20, 42, 500);
+
+  &.-size-s {
+    @include fz(16, 34, 500);
+  }
+
+  &.-size-m {
+    @include fz(32, 40, 500);
+  }
+
+  &.-size-l {
+    @include fz(80, 88, 500);
+  }
+
+  &.-font-main {
+    font-family: $fontFamilyMain;
+  }
+}

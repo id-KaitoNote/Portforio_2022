@@ -1,6 +1,6 @@
 'use strict'
 
-const watch = require('gulp')
+const { watch } = require('gulp')
 
 const configPath = require('../../config-path')
 const reload = require('./reload')

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.c-snsList {
+  margin-top: 70px;
+  &__item {
+    @include notfirst() {
+      margin-top: 20px;
+    }
+  }
+  img {
+    max-width: 20px;
+  }
+}

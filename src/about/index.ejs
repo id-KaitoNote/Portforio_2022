@@ -1,0 +1,58 @@
+<%
+
+// dir
+const dir = '../'
+
+const pageData = {
+  pageName: 'about',
+  title: 'KAITO NOTE Portforio | ABOUT',
+  desc: 'description',
+  ogType: 'website'
+}
+
+%>
+
+<%- include (dir + 'inc/_head', {meta: pageData}) %>
+<main class="l-page">
+  <div class="l-container">
+    <section class="p-mv__about">
+      <div class="l-inner -size-s">
+        <div class="p-mv__about--inner">
+          <div class="p-mv__about--textArea">
+            <h1 class="c-heading -size-l">ABOUT</h1>
+            <p class="c-text -size-m">Kaito Note / 野手 凱斗</p>
+            <p class="c-text -size-s">
+              私は大阪を拠点に、Web制作や、<br>
+              モーショングラフィックスを中心とした映像制作を行っています。
+            </p>
+            <p class="c-text -size-s">
+              A portfolio site of Kaito Note,<br>
+              a front-end engineer and motion designer.<br>
+            </p>
+          </div>
+          <div class="p-mv__about--imageArea">
+            <img src="/assets/images/about/image__about-mv.jpg" alt="">
+          </div>
+        </div>
+        <dl class="about__list">
+          <%- include(dir + 'modules/_about-list', {aboutLists:[
+            {
+            term:"Skills",
+            desc:"HTML, CSS, SCSS, BEM, FLOCSS,<br>EJS, JavaScript, jQuery, GSAP, Three.js, Pixi.js,<br>Git, Gulp, Webpack,<br>Wordpress, MovableType",
+            },
+            {
+            term:"Skills",
+            desc:"HTML, CSS, SCSS, BEM, FLOCSS,<br>EJS, JavaScript, jQuery, GSAP, Three.js, Pixi.js,<br>Git, Gulp, Webpack,<br>Wordpress, MovableType",
+            },
+            {
+            term:"Skills",
+            desc:"HTML, CSS, SCSS, BEM, FLOCSS,<br>EJS, JavaScript, jQuery, GSAP, Three.js, Pixi.js,<br>Git, Gulp, Webpack,<br>Wordpress, MovableType",
+            },
+            ]})
+          %>
+        </dl>
+      </div>
+    </section>
+  </div>
+</main>
+<%- include (dir + 'inc/_footer', {meta: pageData}) %>

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.c-gradationCircle {
+  width: 600px;
+  height: 600px;
+  background: $gradient;
+  filter: blur(25px);
+  border-radius: 50%;
+  &.-size-l {
+    width: 1000px;
+    height: 1000px;
+  }
+  &.-size-m {
+    width: 700px;
+    height: 700px;
+  }
+}

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @forward './mixins/font-setting';
+@forward './mixins/functions';
 @forward './mixins/media-query';
 @forward './mixins/not-first';
 @forward './mixins/not-last';

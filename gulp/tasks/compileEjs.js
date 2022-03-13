@@ -5,6 +5,7 @@ const { src, dest } = require('gulp')
 const configPath = require('../../config-path')
 
 const ejs = require('gulp-ejs')
+const ejsLint = require('ejs-lint');
 const htmlbeautify = require("gulp-html-beautify")
 const rename = require('gulp-rename')
 const plumber = require('gulp-plumber')

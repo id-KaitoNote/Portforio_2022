@@ -19,16 +19,36 @@ $breakpoint-down: (
 
 // font
 // ----------------------------------------------------------
-$fontFamily: 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
+$fontFamilyMain: 'ivypresto-display', serif;
+$fontFamilySub: 'futura-pt,', sans-serif;
 
 // color
 // ----------------------------------------------------------
-$color: (
-  white: #fff,
-  black: #000,
+$color-base: #000;
+$color-text: #fff;
+$color-white: #fff;
+$color-gray: #707070;
+
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 0, 0, 1) 0%,
+  rgba(255, 110, 0, 1) 32%,
+  rgba(255, 213, 0, 1) 59%,
+  rgba(255, 255, 255, 1) 100%
 );
+$gradient-btn: linear-gradient(
+  90deg,
+  rgba(255, 0, 0, 1) 0%,
+  rgba(255, 110, 0, 1) 32%,
+  rgba(255, 213, 0, 1) 59%,
+  rgba(255, 255, 255, 1) 100%
+);
+
+// headerHeight
+// ----------------------------------------------------------
+$headerHeight: 160px;
 
 // 汎用easing
 // ----------------------------------------------------------
-$comMS: 400ms;
+$comMS: 300ms;
 $comES: ease;

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.c-heading {
+  font-family: $fontFamilyMain;
+  @include fz(120, 120, 400);
+  @include tracking(50);
+  &.-size-s {
+    @include fz(80, 88, 400);
+    @include tracking(200);
+  }
+  &.-size-l {
+    @include fz(140, 148, 400);
+    @include tracking(100);
+  }
+}

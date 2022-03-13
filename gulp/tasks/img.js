@@ -20,7 +20,7 @@ const img = (done) => {
         pngquant(),
         imagemin.svgo(),
         imagemin.optipng(),
-        imagemin.gifsicle({ optimizationLevel: 3 }),
+        imagemin.gifsicle({ optimizationLevel: 6 }),
       ])
     )
     .pipe(dest(`${configPath.dirs.img.dist}`))

@@ -1,0 +1,12 @@
+<%
+
+var aboutLists = (typeof aboutLists === 'undefined')?'' : aboutLists
+
+%>
+
+<% for (var i = 0;i < aboutLists.length;i++){ %>
+  <dt class="about__term"><%- aboutLists[i].term %></dt>
+  <dd class="about__desc">
+    <%- aboutLists[i].desc %>
+  </dd>
+<% } %>

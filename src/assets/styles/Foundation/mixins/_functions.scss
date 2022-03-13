@@ -1,0 +1,8 @@
+@use '../variables' as *;
+@use 'sass:math';
+
+// vw
+@function vw($size, $viewport: 1440) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}

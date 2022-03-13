@@ -11,6 +11,11 @@
   &::after {
     box-sizing: border-box;
   }
+
+  &::selection {
+    color: #fff;
+    background: #ff6e00;
+  }
 }
 
 html {
@@ -22,16 +27,29 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  font-family: $fontFamily;
-  color: map.get($map: $color, $key: text);
+  overflow-x: hidden;
+  font-family: $fontFamilySub;
+  color: $color-text;
   letter-spacing: 0.05em;
   word-wrap: break-word;
-  background-color: map.get($map: $color, $key: text);
-  background-color: map.get($map: $color, $key: white);
+  background-color: $color-base;
+  &:after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url(../images/common/noise.gif);
+    opacity: 0.05;
+  }
 }
 
 a {
-  color: map.get($map: $color, $key: text);
+  color: $color-text;
   text-decoration: none;
 }
 

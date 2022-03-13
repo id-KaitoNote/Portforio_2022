@@ -1,7 +1,9 @@
 @use 'sass:math';
+@use './functions' as *;
 
 @mixin fz($size, $height: false, $weight: false) {
-  font-size: rem($size);
+  font-size: $size * 1px;
+  font-size: vw($size);
 
   @if $weight {
     font-weight: $weight;
@@ -10,4 +12,8 @@
   @if $height {
     line-height: math.div($height, $size);
   }
+}
+
+@mixin tracking($tracking) {
+  letter-spacing: math.div($tracking, 1000) + em;
 }

@@ -5,7 +5,7 @@ const dir = './'
 
 const pageData = {
   pageName: 'top',
-  title: 'title',
+  title: 'KAITO NOTE Portforio',
   desc: 'description',
   ogType: 'website'
 }
@@ -13,5 +13,129 @@ const pageData = {
 %>
 
 <%- include (dir + 'inc/_head', {meta: pageData}) %>
-  <p>Hallow World.</p>
+<main class="l-page">
+  <div class="l-container">
+
+    <section class="p-mv">
+      <div class="l-inner -height-max">
+        <div class="p-mv__inner">
+          <div class="p-mv__leftArea">
+            <ul class="c-snsList">
+              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+            </ul>
+            <img class="p-mv__scrollDown" src="/assets/images/top/image__scroll.png" alt="">
+          </div>
+          <div class="p-mv__centerArea">
+            <div class="l-inner -size-m">
+              <h1 class="c-heading">Inspiring Digital Creative</h1>
+              <p class="c-text">
+                A portfolio site of Kaito Note,<br>
+                a front-end engineer and<br>
+                motion designer.
+              </p>
+            </div>
+          </div>
+          <div class="p-mv__rightArea">
+            <div class="c-locationNavi">
+              <span data-location="true"></span>
+              <span data-location=false></span>
+              <span data-location="false"></span>
+              <span data-location="false"></span>
+            </div>
+            <div class="c-locationNavi__number">
+              <span>1</span>
+              <span>4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-gradationCircle"></div>
+    </section>
+
+    <section class="top__about">
+      <div class="l-inner -size-m">
+        <h2 class="c-heading">ABOUT</h2>
+        <p class="c-text -size-s">
+          My name is Kaito Note.<br>
+          A digital creator doing Front-end Development and<br>
+          Motion Design. I am active in Osaka, Japan.
+        </p>
+        <div class="top__about--btnWrap">
+          <a href="/about/" class="c-btn">VIEW MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="top__works">
+      <div class="l-inner -size-m">
+        <div class="top__works--headingArea">
+          <h2 class="c-heading">WORKS</h2>
+          <span></span>
+        </div>
+        <div class="top__works--textWrap">
+          <p class="c-text -size-s">
+            MThese are my achievements<br>
+            in web and video production.<br>
+          </p>
+        </div>
+      </div>
+      <div class="c-gradationCircle -size-l"></div>
+      <div class="l-inner -size-m">
+        <ul class="top__works--list">
+          <%- include(dir + 'modules/_top-works-list', {worksLists:[
+            {
+            title:"GROSSY",
+            desc:"MThese are my achievements<br>in web and video production.<br>",
+            image: "image__works_grossy.png"
+            },
+            {
+            title:"AKATSUKI",
+            desc:"MThese are my achievements<br>in web and video production.<br>",
+            image: "image__works_grossy.png"
+            },
+            {
+            title:"BRING",
+            desc:"MThese are my achievements<br>in web and video production.<br>",
+            image: "image__works_grossy.png"
+            },
+            {
+            title:"AKATSUKI",
+            desc:"MThese are my achievements<br>in web and video production.<br>",
+            image: "image__works_grossy.png"
+            },
+            {
+            title:"BRING",
+            desc:"MThese are my achievements<br>in web and video production.<br>",
+            image: "image__works_grossy.png"
+            }
+            ]})
+          %>
+        </ul>
+        <div class="top__works--btnWrap">
+          <a href="/works/" class="c-btn">VIEW MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="top__contact">
+      <div class="l-inner -size-m">
+        <div class="top__contact--inner">
+          <h2 class="c-heading">CONTACT</h2>
+          <div class="top__contact--textArea">
+            <p class="c-text -size-s">
+              Web制作や映像制作のお仕事のご依頼を受け付けています。<br>
+              メールよりお気軽にご連絡ください。
+            </p>
+            <p class="c-text -size-l -font-main">id_not@au.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="c-gradationCircle -size-m"></div>
+    </section>
+
+  </div>
+</main>
 <%- include (dir + 'inc/_footer', {meta: pageData}) %>

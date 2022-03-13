@@ -1,0 +1,17 @@
+<%
+
+var worksLists = (typeof worksLists === 'undefined')?'' : worksLists
+
+%>
+
+<% for (var i = 0;i < worksLists.length;i++){ %>
+  <li class="top__works--item">
+    <div class="top__works--textArea">
+      <h3 class="c-heading -size-s"><%- worksLists[i].title %></h3>
+      <p class="c-text -size-s"><%- worksLists[i].desc %></p>
+    </div>
+    <div class="top__works--imageArea">
+      <img src="/assets/images/top/<%- worksLists[i].image %>" alt="">
+    </div>
+  </li>
+<% } %>

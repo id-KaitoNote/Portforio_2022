@@ -1,3 +1,10 @@
+@use '../Foundation/mixin' as *;
+@use '../Foundation/variables' as *;
+
 .c-btn {
-  color: black;
+  display: inline-block;
+  max-width: 240px;
+  font-family: $fontFamilyMain;
+  background: $gradient-btn;
+  @include fz(32, 32, 500);
 }

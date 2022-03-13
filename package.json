@@ -54,6 +54,7 @@
   "dependencies": {
     "core-js": "3",
     "del": "^6.0.0",
+    "ejs-lint": "^1.2.1",
     "postcss": "8"
   }
 }

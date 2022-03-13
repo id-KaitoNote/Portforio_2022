@@ -1,7 +1,164 @@
-.top {
-  display: flex;
+@charset "utf-8";
 
-  p {
-    background-color: red;
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.top {
+  &:before {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    width: 1px;
+    height: 100%;
+    content: '';
+    background: $color-gray;
+  }
+
+  &__about {
+    width: 100%;
+    padding-top: 400px;
+
+    .c-heading {
+      position: relative;
+      padding-right: 240px;
+      text-align: right;
+      &:before {
+        position: absolute;
+        top: -400px;
+        left: 400px;
+        width: 640px;
+        height: 640px;
+        content: '';
+        border: solid 1px $color-white;
+        border-radius: 50%;
+      }
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: -120px;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 0.5px;
+        content: '';
+        background: $color-white;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .c-text {
+      margin-top: 240px;
+    }
+
+    .c-btn {
+      margin-top: 48px;
+    }
+  }
+
+  &__works {
+    position: relative;
+    padding-top: 480px;
+    &--headingArea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .c-heading {
+        width: calc(100% - 720px);
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $color-white;
+      }
+    }
+
+    &--textWrap {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 48px;
+      padding-right: 240px;
+    }
+
+    .c-gradationCircle {
+      position: absolute;
+      top: 0;
+      left: -30%;
+      z-index: -1;
+    }
+
+    &--list {
+      margin-top: 160px;
+    }
+
+    &--item {
+      display: flex;
+      @include notfirst() {
+        margin-top: 160px;
+      }
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        .top__works--imageArea {
+          padding-right: 60px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &--textArea,
+    &--imageArea {
+      width: 50%;
+    }
+
+    &--textArea {
+      padding-left: 60px;
+      .c-heading {
+        margin-top: 120px;
+      }
+
+      .c-text {
+        margin-top: 20px;
+      }
+    }
+
+    &--imageArea {
+      padding-left: 60px;
+    }
+
+    &--btnWrap {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 160px;
+    }
+
+    .c-btn {
+      margin-top: 160px;
+      margin-left: auto;
+    }
+  }
+
+  &__contact {
+    padding-bottom: 160px;
+    margin-top: 320px;
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--textArea {
+      width: 50%;
+      padding-left: 60px;
+      margin-top: 160px;
+      .c-text:last-child {
+        margin-top: 40px;
+      }
+    }
+    .c-gradationCircle {
+      position: absolute;
+      right: 20%;
+      bottom: -135px;
+      z-index: -1;
+      transform: skew(-10deg, -10deg);
+    }
   }
 }

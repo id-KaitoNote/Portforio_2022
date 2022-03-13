@@ -4,8 +4,28 @@
 @use '../Foundation/mixin' as *;
 
 .l-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
   &__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-height: $headerHeight;
+  }
+  &__logo {
+    @include fz(20, 22, 700);
+  }
+  &__list {
+    display: flex;
+    padding: 30px 0;
+    @include fz(14, 31, 400);
+  }
+  &__item {
+    @include notfirst() {
+      margin-left: 30px;
+    }
   }
 }

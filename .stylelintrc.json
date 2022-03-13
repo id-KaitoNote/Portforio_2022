@@ -27,7 +27,8 @@
           "content",
           "forward",
           "use",
-          "charaset"
+          "charaset",
+          "return"
         ]
       }
     ],
