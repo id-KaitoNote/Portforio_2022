@@ -6,17 +6,22 @@
 .about {
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 160px;
+    flex-direction: column;
+    margin-top: vw(160);
   }
   &__term {
-    width: 25%;
-    @include fz(48, 56, 400);
+    width: 100%;
+    @include fz(68, 76, 400);
     @include tracking(200);
     font-family: $fontFamilyMain;
+
+    @include notfirst() {
+      margin-top: vw(80);
+    }
   }
   &__desc {
-    width: calc(100% - 25%);
-    @include fz(16, 28, 400);
+    width: 100%;
+    margin-top: vw(20);
+    @include fz(20, 28, 400);
   }
 }

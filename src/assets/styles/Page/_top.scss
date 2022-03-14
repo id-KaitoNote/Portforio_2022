@@ -12,9 +12,10 @@
     width: 1px;
     height: 100%;
     content: '';
-    background: $color-gray;
+    background: $color-line;
   }
 
+  // about
   &__about {
     width: 100%;
     padding-top: 400px;
@@ -30,7 +31,7 @@
         width: 640px;
         height: 640px;
         content: '';
-        border: solid 1px $color-white;
+        border: solid 1px $color-line;
         border-radius: 50%;
       }
       &:after {
@@ -42,7 +43,7 @@
         width: 100%;
         height: 0.5px;
         content: '';
-        background: $color-white;
+        background: $color-line;
         transform: rotate(-45deg);
       }
     }
@@ -56,51 +57,54 @@
     }
   }
 
+  // works
   &__works {
     position: relative;
-    padding-top: 480px;
+    margin-top: vw(480);
     &--headingArea {
       display: flex;
       align-items: center;
       justify-content: center;
       .c-heading {
-        width: calc(100% - 720px);
+        width: calc(100% - vw(720));
       }
       span {
         display: block;
         width: 100%;
         height: 1px;
-        background: $color-white;
+        background: $color-line;
       }
     }
 
     &--textWrap {
       display: flex;
-      justify-content: flex-end;
-      padding-top: 48px;
-      padding-right: 240px;
+      justify-content: flex-start;
+      width: 50%;
+      padding-top: vw(48);
+      padding-left: vw(60);
+      margin-left: auto;
     }
 
     .c-gradationCircle {
       position: absolute;
-      top: 0;
+      top: vw(-400);
       left: -30%;
       z-index: -1;
     }
 
     &--list {
-      margin-top: 160px;
+      margin-top: vw(160);
     }
 
     &--item {
       display: flex;
       @include notfirst() {
-        margin-top: 160px;
+        margin-top: vw(160);
       }
       &:nth-child(odd) {
         flex-direction: row-reverse;
         .top__works--imageArea {
-          padding-right: 60px;
+          padding-right: vw(60);
           padding-left: 0;
         }
       }
@@ -112,18 +116,18 @@
     }
 
     &--textArea {
-      padding-left: 60px;
+      padding-left: vw(60);
       .c-heading {
-        margin-top: 120px;
+        margin-top: vw(80);
       }
 
       .c-text {
-        margin-top: 20px;
+        margin-top: vw(20);
       }
     }
 
     &--imageArea {
-      padding-left: 60px;
+      padding-left: vw(60);
     }
 
     &--btnWrap {
@@ -138,9 +142,12 @@
     }
   }
 
+  // contact
   &__contact {
-    padding-bottom: 160px;
-    margin-top: 320px;
+    position: relative;
+    padding-top: vw(320);
+    padding-bottom: vw(160);
+    overflow: hidden;
     &--inner {
       display: flex;
       justify-content: space-between;

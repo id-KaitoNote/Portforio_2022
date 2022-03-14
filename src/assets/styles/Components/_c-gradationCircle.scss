@@ -4,17 +4,17 @@
 @use '../Foundation/mixin' as *;
 
 .c-gradationCircle {
-  width: 600px;
-  height: 600px;
+  width: vw(600);
+  height: vw(600);
   background: $gradient;
   filter: blur(25px);
   border-radius: 50%;
   &.-size-l {
-    width: 1000px;
-    height: 1000px;
+    width: vw(1000);
+    height: vw(1000);
   }
   &.-size-m {
-    width: 700px;
-    height: 700px;
+    width: vw(700);
+    height: vw(700);
   }
 }

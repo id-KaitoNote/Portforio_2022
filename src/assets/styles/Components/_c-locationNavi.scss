@@ -2,7 +2,12 @@
 @use '../Foundation/variables' as *;
 
 .c-locationNavi {
-  margin-top: 70px;
+  position: fixed;
+  top: 50%;
+  right: vw(80);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   span {
     display: block;
     width: 15px;
@@ -29,7 +34,7 @@
       width: 90px;
       height: 1px;
       content: '';
-      background: $color-gray;
+      background: $color-line;
       transform: rotate(-45deg);
     }
     span {

@@ -13,50 +13,47 @@ const pageData = {
 %>
 
 <%- include (dir + 'inc/_head', {meta: pageData}) %>
+
 <main class="l-page">
   <div class="l-container">
 
     <section class="p-mv">
-      <div class="l-inner -height-max">
-        <div class="p-mv__inner">
-          <div class="p-mv__leftArea">
-            <ul class="c-snsList">
-              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
-              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
-              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
-              <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
-            </ul>
-            <img class="p-mv__scrollDown" src="/assets/images/top/image__scroll.png" alt="">
-          </div>
-          <div class="p-mv__centerArea">
-            <div class="l-inner -size-m">
-              <h1 class="c-heading">Inspiring Digital Creative</h1>
-              <p class="c-text">
-                A portfolio site of Kaito Note,<br>
-                a front-end engineer and<br>
-                motion designer.
-              </p>
-            </div>
-          </div>
-          <div class="p-mv__rightArea">
-            <div class="c-locationNavi">
-              <span data-location="true"></span>
-              <span data-location=false></span>
-              <span data-location="false"></span>
-              <span data-location="false"></span>
-            </div>
-            <div class="c-locationNavi__number">
-              <span>1</span>
-              <span>4</span>
+      <div class="l-inner">
+        <div class="p-mv__infoWrap">
+          <div class="l-inner">
+            <div class="p-mv__info">
+              <div class="c-locationNavi">
+                <span data-location="true"></span>
+                <span data-location=false></span>
+                <span data-location="false"></span>
+                <span data-location="false"></span>
+              </div>
+              <img class="p-mv__scrollDown" src="/assets/images/top/image__scroll.png" alt="">
+              <ul class="c-snsList">
+                <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+                <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+                <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+                <li class="c-snsList__item"><a href="#"><img src="/assets/images/common/icon__github.png" alt=""></a></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div class="p-mv__titleArea">
+          <div class="l-inner -size-xm">
+            <h1 class="c-heading">Inspiring Digital Creative</h1>
+            <p class="c-text">
+              A portfolio site of Kaito Note,<br>
+              a front-end engineer and<br>
+              motion designer.
+            </p>
+          </div>
+        </div>
+        <div class="c-gradationCircle"></div>
       </div>
-      <div class="c-gradationCircle"></div>
     </section>
 
     <section class="top__about">
-      <div class="l-inner -size-m">
+      <div class="l-inner -size-s">
         <h2 class="c-heading">ABOUT</h2>
         <p class="c-text -size-s">
           My name is Kaito Note.<br>
@@ -70,58 +67,58 @@ const pageData = {
     </section>
 
     <section class="top__works">
-      <div class="l-inner -size-m">
-        <div class="top__works--headingArea">
-          <h2 class="c-heading">WORKS</h2>
-          <span></span>
-        </div>
-        <div class="top__works--textWrap">
-          <p class="c-text -size-s">
-            MThese are my achievements<br>
-            in web and video production.<br>
-          </p>
-        </div>
-      </div>
-      <div class="c-gradationCircle -size-l"></div>
-      <div class="l-inner -size-m">
-        <ul class="top__works--list">
-          <%- include(dir + 'modules/_top-works-list', {worksLists:[
-            {
-            title:"GROSSY",
-            desc:"MThese are my achievements<br>in web and video production.<br>",
-            image: "image__works_grossy.png"
-            },
-            {
-            title:"AKATSUKI",
-            desc:"MThese are my achievements<br>in web and video production.<br>",
-            image: "image__works_grossy.png"
-            },
-            {
-            title:"BRING",
-            desc:"MThese are my achievements<br>in web and video production.<br>",
-            image: "image__works_grossy.png"
-            },
-            {
-            title:"AKATSUKI",
-            desc:"MThese are my achievements<br>in web and video production.<br>",
-            image: "image__works_grossy.png"
-            },
-            {
-            title:"BRING",
-            desc:"MThese are my achievements<br>in web and video production.<br>",
-            image: "image__works_grossy.png"
-            }
-            ]})
-          %>
-        </ul>
-        <div class="top__works--btnWrap">
-          <a href="/works/" class="c-btn">VIEW MORE</a>
+      <div class="l-inner -size-s">
+        <div class="top__works--inner">
+          <div class="c-gradationCircle -size-l"></div>
+          <div class="top__works--headingArea">
+            <h2 class="c-heading">WORKS</h2>
+            <span></span>
+          </div>
+          <div class="top__works--textWrap">
+            <p class="c-text -size-s">
+              MThese are my achievements<br>
+              in web and video production.<br>
+            </p>
+          </div>
+          <ul class="top__works--list">
+            <%- include(dir + 'modules/_top-works-list', {worksLists:[
+              {
+              title:"GROSSY",
+              desc:"MThese are my achievements<br>in web and video production.<br>",
+              image: "image__works_grossy.png"
+              },
+              {
+              title:"AKATSUKI",
+              desc:"MThese are my achievements<br>in web and video production.<br>",
+              image: "image__works_grossy.png"
+              },
+              {
+              title:"BRING",
+              desc:"MThese are my achievements<br>in web and video production.<br>",
+              image: "image__works_grossy.png"
+              },
+              {
+              title:"AKATSUKI",
+              desc:"MThese are my achievements<br>in web and video production.<br>",
+              image: "image__works_grossy.png"
+              },
+              {
+              title:"BRING",
+              desc:"MThese are my achievements<br>in web and video production.<br>",
+              image: "image__works_grossy.png"
+              }
+              ]})
+            %>
+          </ul>
+          <div class="top__works--btnWrap">
+            <a href="/works/" class="c-btn">VIEW MORE</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="top__contact">
-      <div class="l-inner -size-m">
+      <div class="l-inner -size-s">
         <div class="top__contact--inner">
           <h2 class="c-heading">CONTACT</h2>
           <div class="top__contact--textArea">

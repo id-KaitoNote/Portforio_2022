@@ -5,10 +5,10 @@
 
 .c-heading {
   font-family: $fontFamilyMain;
-  @include fz(120, 120, 400);
+  @include fz(120, 140, 400);
   @include tracking(50);
   &.-size-s {
-    @include fz(80, 88, 400);
+    @include fz(40, 48, 400);
     @include tracking(200);
   }
   &.-size-l {

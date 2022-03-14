@@ -27,7 +27,6 @@ body {
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
   font-family: $fontFamilySub;
   color: $color-text;
   letter-spacing: 0.05em;
@@ -44,7 +43,7 @@ body {
     height: 100%;
     content: '';
     background: url(../images/common/noise.gif);
-    opacity: 0.05;
+    opacity: 0.1;
   }
 }
 

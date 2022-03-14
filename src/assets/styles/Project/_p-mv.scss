@@ -5,8 +5,21 @@
 
 .p-mv {
   position: relative;
+  width: 100%;
   height: 100vh;
-  padding-top: $headerHeight;
+  padding-top: vw($headerHeight);
+  overflow-x: hidden;
+  &:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 1px;
+    margin: 0 calc(50% - 50vw);
+    content: '';
+    background: $color-line;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -14,42 +27,19 @@
     padding-top: 25vh;
   }
 
-  .c-text {
-    margin-top: 80px;
+  &__infoWrap {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    padding-bottom: vw(50);
   }
 
-  .c-heading {
-    position: relative;
-    &:before {
-      position: absolute;
-      right: 0;
-      bottom: -30px;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 1px;
-      content: '';
-      background: $color-white;
-    }
-  }
-
-  .c-gradationCircle {
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    z-index: -1;
-  }
-
-  &__centerArea {
-    position: relative;
-  }
-
-  &__leftArea,
-  &__rightArea {
+  &__info {
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
-    padding-bottom: 60px;
   }
 
   @keyframes rotate {
@@ -63,14 +53,46 @@
   }
 
   &__scrollDown {
+    max-width: vw(200);
+    max-height: vw(200);
     cursor: pointer;
     animation: rotate 10s linear infinite;
     translate: transform $comMS $comES;
   }
 
+  &__titleArea {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    margin-left: 80px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .c-text {
+    margin-top: 80px;
+  }
+
+  .c-heading {
+    position: relative;
+  }
+
+  .c-gradationCircle {
+    position: absolute;
+    top: 45%;
+    right: vw(150);
+    z-index: -1;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  // about
   &__about {
-    padding-top: 160px;
-    margin-top: $headerHeight;
+    padding-top: vw(160);
+    margin-top: vw($headerHeight);
     &--inner {
       display: flex;
     }
@@ -90,7 +112,6 @@
     }
     &--imageArea {
       display: flex;
-      justify-content: flex-end;
       width: 50%;
       img {
         max-width: 500px;

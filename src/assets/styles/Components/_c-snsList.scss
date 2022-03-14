@@ -4,10 +4,10 @@
 @use '../Foundation/mixin' as *;
 
 .c-snsList {
-  margin-top: 70px;
+  display: flex;
   &__item {
-    @include notfirst() {
-      margin-top: 20px;
+    @include notlast() {
+      margin-right: vw(30);
     }
   }
   img {

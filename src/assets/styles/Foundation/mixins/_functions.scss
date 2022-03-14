@@ -2,7 +2,7 @@
 @use 'sass:math';
 
 // vw
-@function vw($size, $viewport: 1440) {
+@function vw($size, $viewport: 1760) {
   $rate: math.div(100, $viewport);
   @return $rate * $size * 1vw;
 }
