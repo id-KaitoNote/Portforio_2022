@@ -5,9 +5,22 @@
 
 .c-snsList {
   display: flex;
+  @include mq-down(sm) {
+    flex-direction: column;
+    order: 3;
+  }
   &__item {
+    @include mq-down(sm) {
+      margin-top: vw(10, $breakpoint-sm);
+    }
+    &:first-child {
+      margin-top: 0;
+    }
     @include notlast() {
       margin-right: vw(30);
+      @include mq-down(sm) {
+        margin-right: 0;
+      }
     }
   }
   img {

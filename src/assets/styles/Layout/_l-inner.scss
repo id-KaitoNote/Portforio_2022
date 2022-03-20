@@ -8,20 +8,36 @@
   padding: 0 vw(80);
   margin: 0 auto;
 
+  @include mq-down(md) {
+    padding: 0 vw(50);
+  }
+
   &.-size-s {
     padding: 0 vw(240);
+    @include mq-down(md) {
+      padding: 0 vw(100);
+    }
   }
 
   &.-size-m {
     padding: 0 vw(160);
+    @include mq-down(md) {
+      padding: 0 vw(80);
+    }
   }
 
   &.-size-xm {
     padding: 0 vw(120);
+    @include mq-down(md) {
+      padding: 0 vw(60);
+    }
   }
 
   &.-size-l {
     padding: 0 vw(40);
+    @include mq-down(md) {
+      padding: 0 vw(40);
+    }
   }
 
   &.-size-xl {

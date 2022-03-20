@@ -40,11 +40,11 @@ const pageData = {
         </div>
         <div class="p-mv__titleArea">
           <div class="l-inner -size-xm">
-            <h1 class="c-heading">Inspiring Digital Creative</h1>
-            <p class="c-text">
-              A portfolio site of Kaito Note,<br>
-              a front-end engineer and<br>
-              motion designer.
+            <h1 class="c-heading"><span>Inspirational</span><br>Digital Creative</h1>
+            <p class="c-text -size-xs">
+              A PORTFOLIO SITE OF KAITO NOTE,<br>
+              A FRONT-END ENGINEER AND<br>
+              MOTION DESIGNER.
             </p>
           </div>
         </div>
@@ -52,31 +52,57 @@ const pageData = {
       </div>
     </section>
 
-    <section class="top__about">
+    <section class="top__about -section-margin">
+      <p class="c-text -bg">WEB DEVELOPMENT</p>
       <div class="l-inner -size-s">
-        <h2 class="c-heading">ABOUT</h2>
-        <p class="c-text -size-s">
-          My name is Kaito Note.<br>
-          A digital creator doing Front-end Development and<br>
-          Motion Design. I am active in Osaka, Japan.
-        </p>
-        <div class="top__about--btnWrap">
-          <a href="/about/" class="c-btn">VIEW MORE</a>
+        <div class="top__about--intro">
+          <p class="c-text">
+            <span class="-left">Web Development</span>
+            <span class="-center">×</span>
+            <span class="-right">Motion Design</span>
+          </p>
+          <div class="top__about--circle"></div>
+        </div>
+      </div>
+            <p class="c-text -bg">MOTION DESIGNER</p>
+      <div class="l-inner -size-s">
+        <div class="top__about--content">
+          <div class="top__about--imageArea">
+            <img src="/assets/images/about/image__about-mv.jpg" alt="">
+            <h2 class="c-heading -size-l">ABOUT</h2>
+          </div>
+          <div class="top__about--infoArea">
+            <p class="c-text -size-xm">
+              Kaito Note <span>/</span><span class="c-text -size-m"> 野手 凱斗</span>
+            </p>
+            <p class="c-text -size-m -font-main">
+              My name is Kaito Note. <br>
+              A digital creator doing<br>
+              Front-end Development and Motion Design.
+            </p>
+            <p class="c-text -size-s">
+              私はデジタルクリエイターです。<br>
+              モーションデザインやフロントエンドエンジニアをしています。<br>
+            </p>
+            <div class="top__about--btnWrap">
+              <a href="/about/" class="c-btn">VIEW MORE</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="top__works">
+    <section class="top__works -section-margin">
       <div class="l-inner -size-s">
         <div class="top__works--inner">
           <div class="c-gradationCircle -size-l"></div>
           <div class="top__works--headingArea">
-            <h2 class="c-heading">WORKS</h2>
+            <h2 class="c-heading -size-l">WORKS</h2>
             <span></span>
           </div>
           <div class="top__works--textWrap">
             <p class="c-text -size-s">
-              MThese are my achievements<br>
+              These are my achievements<br>
               in web and video production.<br>
             </p>
           </div>
@@ -84,43 +110,45 @@ const pageData = {
             <%- include(dir + 'modules/_top-works-list', {worksLists:[
               {
               title:"GROSSY",
-              desc:"MThese are my achievements<br>in web and video production.<br>",
+              desc:"Art Direction / Motion Design /",
               image: "image__works_grossy.png"
               },
               {
               title:"AKATSUKI",
-              desc:"MThese are my achievements<br>in web and video production.<br>",
+              desc:"These are my achievements<br>in web and video production.<br>",
               image: "image__works_grossy.png"
               },
               {
               title:"BRING",
-              desc:"MThese are my achievements<br>in web and video production.<br>",
+              desc:"These are my achievements<br>in web and video production.<br>",
               image: "image__works_grossy.png"
               },
               {
               title:"AKATSUKI",
-              desc:"MThese are my achievements<br>in web and video production.<br>",
+              desc:"These are my achievements<br>in web and video production.<br>",
               image: "image__works_grossy.png"
               },
               {
               title:"BRING",
-              desc:"MThese are my achievements<br>in web and video production.<br>",
+              desc:"These are my achievements<br>in web and video production.<br>",
               image: "image__works_grossy.png"
               }
               ]})
             %>
           </ul>
           <div class="top__works--btnWrap">
+            <a href="/works/#web" class="c-btn">WEB</a>
             <a href="/works/" class="c-btn">VIEW MORE</a>
+            <a href="/works/#movie" class="c-btn">MOVIE</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="top__contact">
+    <section class="top__contact -section-margin">
       <div class="l-inner -size-s">
         <div class="top__contact--inner">
-          <h2 class="c-heading">CONTACT</h2>
+          <h2 class="c-heading -size-l">CONTACT</h2>
           <div class="top__contact--textArea">
             <p class="c-text -size-s">
               Web制作や映像制作のお仕事のご依頼を受け付けています。<br>

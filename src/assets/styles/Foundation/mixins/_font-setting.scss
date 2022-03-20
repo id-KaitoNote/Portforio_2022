@@ -1,9 +1,9 @@
 @use 'sass:math';
 @use './functions' as *;
 
-@mixin fz($size, $height: false, $weight: false) {
+@mixin fz($size, $height: false, $weight: false, $viewport: 1760) {
   font-size: $size * 1px;
-  font-size: vw($size);
+  font-size: vw($size, $viewport);
 
   @if $weight {
     font-weight: $weight;

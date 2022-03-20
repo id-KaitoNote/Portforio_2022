@@ -14,9 +14,15 @@
     align-items: center;
     justify-content: space-between;
     min-height: vw($headerHeight);
+    @include mq-down(sm) {
+      min-height: vw(calc($headerHeight / 2), $breakpoint-sm);
+    }
   }
   &__logo {
     @include fz(16, 22, 700);
+    @include mq-down(sm) {
+      @include fz(12, 22, 700, $breakpoint-sm);
+    }
   }
   &__list {
     display: flex;

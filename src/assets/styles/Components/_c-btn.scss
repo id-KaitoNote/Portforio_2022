@@ -3,8 +3,11 @@
 
 .c-btn {
   display: inline-block;
-  max-width: 240px;
-  font-family: $fontFamilyMain;
-  background: $gradient-btn;
-  @include fz(32, 32, 500);
+  @include fz(12, 20, 300);
+  @include mq-down(sm) {
+    @include fz(12, 20, 300, $breakpoint-sm);
+  }
+  &:hover {
+    background: $gradient-btn;
+  }
 }

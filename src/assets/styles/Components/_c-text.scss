@@ -5,19 +5,64 @@
   font-family: $fontFamilySub;
   @include fz(20, 42, 500);
 
+  &.-size-xs {
+    @include fz(14, 24, 500);
+    @include mq-down(sm) {
+      @include fz(12, 20, 500, 375);
+    }
+  }
+
   &.-size-s {
-    @include fz(16, 34, 500);
+    @include fz(16, 28, 500);
+    @include mq-down(sm) {
+      @include fz(14, 24, 500, 375);
+    }
+  }
+
+  &.-size-sm {
+    @include fz(24, 32, 500);
+    @include mq-down(sm) {
+      @include fz(20, 24, 500, $breakpoint-sm);
+    }
   }
 
   &.-size-m {
     @include fz(32, 40, 500);
+    @include mq-down(sm) {
+      @include fz(24, 28, 500, $breakpoint-sm);
+    }
+  }
+
+  &.-size-xm {
+    @include fz(48, 56, 500);
+    @include mq-down(sm) {
+      @include fz(28, 32, 500, $breakpoint-sm);
+    }
+  }
+
+  &.-size-sl {
+    @include fz(60, 66, 500);
   }
 
   &.-size-l {
     @include fz(80, 88, 500);
+    @include mq-down(sm) {
+      @include fz(48, 56, 500, $breakpoint-sm);
+    }
   }
 
   &.-font-main {
     font-family: $fontFamilyMain;
+  }
+  &.-left {
+    text-align: left;
+  }
+
+  &.-center {
+    text-align: center;
+  }
+
+  &.-right {
+    text-align: right;
   }
 }

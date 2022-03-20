@@ -4,74 +4,226 @@
 @use '../Foundation/mixin' as *;
 
 .top {
-  &:before {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: -1;
-    width: 1px;
-    height: 100%;
-    content: '';
-    background: $color-line;
+  .-section-margin {
+    margin-top: vw(200);
+    @include mq-down(sm) {
+      margin-top: vw(200, $breakpoint-sm);
+    }
   }
 
   // about
   &__about {
     width: 100%;
-    padding-top: 400px;
+    overflow: hidden;
+    .c-text {
+      &.-bg {
+        @include fz(260, 260, 600);
+        white-space: nowrap;
+        opacity: 0.05;
+        animation: scrollSample02 15s linear infinite;
+        @include mq-down(sm) {
+          @include fz(80, 80, 600, $breakpoint-sm);
+        }
+      }
+    }
 
-    .c-heading {
+    &--intro {
       position: relative;
-      padding-right: 240px;
-      text-align: right;
+      max-width: vw(1000);
+      margin: 0 auto;
+      @include mq-down(sm) {
+        max-width: 100%;
+      }
+      .c-text {
+        @include fz(60, 120, 400);
+        @include tracking(50);
+        @include mq-down(sm) {
+          @include fz(30, 60, 400, $breakpoint-sm);
+        }
+        span {
+          display: block;
+
+          &.-left {
+            text-align: left;
+          }
+
+          &.-center {
+            text-align: center;
+          }
+
+          &.-right {
+            text-align: right;
+          }
+        }
+        &.-bg {
+          @include fz(260, 260, 600);
+          white-space: nowrap;
+          opacity: 0.05;
+          animation: scrollSample02 15s linear infinite;
+          @include mq-down(sm) {
+            @include fz(260, 260, 600, $breakpoint-sm);
+          }
+        }
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    &--circle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: vw(500);
+      height: vw(500);
+      margin: auto;
+      border: solid 1px $color-line;
+      border-radius: 50%;
+      animation: rotate 1.5s linear infinite;
+      translate: transform $comMS $comES;
+      @include mq-down(sm) {
+        width: vw(250, $breakpoint-sm);
+        height: vw(250, $breakpoint-sm);
+      }
       &:before {
         position: absolute;
-        top: -400px;
-        left: 400px;
-        width: 640px;
-        height: 640px;
+        top: 49%;
+        left: 49%;
+        width: vw(500);
+        height: vw(500);
         content: '';
         border: solid 1px $color-line;
         border-radius: 50%;
+        transform: translate(-50%, -50%);
+        @include mq-down(sm) {
+          width: vw(250, $breakpoint-sm);
+          height: vw(250, $breakpoint-sm);
+        }
       }
       &:after {
         position: absolute;
-        right: 0;
-        bottom: -120px;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 0.5px;
+        top: 49%;
+        left: 51%;
+        width: vw(500);
+        height: vw(500);
         content: '';
-        background: $color-line;
-        transform: rotate(-45deg);
+        border: solid 1px $color-line;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        @include mq-down(sm) {
+          width: vw(250, $breakpoint-sm);
+          height: vw(250, $breakpoint-sm);
+        }
       }
     }
 
-    .c-text {
-      margin-top: 240px;
+    &--content {
+      margin-top: vw(400);
+      @include mq-down(sm) {
+        margin-top: vw(100, $breakpoint-sm);
+      }
     }
 
+    &--imageArea {
+      position: relative;
+      width: 50%;
+      padding-right: vw(80);
+      @include mq-down(sm) {
+        width: 100%;
+        padding-right: 0;
+      }
+      .c-heading {
+        position: absolute;
+        top: vw(-120);
+        right: vw(-100);
+        @include mq-down(sm) {
+          top: vw(-40, $breakpoint-sm);
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &--infoArea {
+      width: 50%;
+      margin-top: vw(-130);
+      margin-left: auto;
+      @include mq-down(sm) {
+        width: 100%;
+        margin-top: vw(60, $breakpoint-sm);
+      }
+      .c-text {
+        span {
+          top: vw(-7);
+          font-weight: 300;
+          @include mq-down(sm) {
+            top: vw(-7, $breakpoint-sm);
+          }
+          &.c-text {
+            position: relative;
+            top: vw(-2);
+            @include mq-down(sm) {
+              top: vw(-1, $breakpoint-sm);
+            }
+          }
+        }
+        &:nth-child(2) {
+          margin-top: vw(60);
+          font-weight: 300;
+          @include tracking(100);
+          @include mq-down(sm) {
+            margin-top: vw(30, $breakpoint-sm);
+          }
+        }
+        &:nth-child(3) {
+          margin-top: vw(60);
+          @include mq-down(sm) {
+            margin-top: vw(20, $breakpoint-sm);
+          }
+        }
+      }
+    }
+    &--btnWrap {
+      display: flex;
+      justify-content: flex-end;
+    }
     .c-btn {
-      margin-top: 48px;
+      margin-top: vw(60);
+      margin-left: auto;
+      @include mq-down(sm) {
+        margin-top: vw(60, $breakpoint-sm);
+      }
     }
   }
 
   // works
   &__works {
     position: relative;
-    margin-top: vw(480);
     &--headingArea {
       display: flex;
       align-items: center;
       justify-content: center;
       .c-heading {
-        width: calc(100% - vw(720));
+        margin-right: vw(40);
+        @include mq-down(sm) {
+          margin-right: vw(20, $breakpoint-sm);
+        }
       }
       span {
         display: block;
         width: 100%;
-        height: 1px;
+        height: 1.5px;
         background: $color-line;
       }
     }
@@ -83,6 +235,12 @@
       padding-top: vw(48);
       padding-left: vw(60);
       margin-left: auto;
+      @include mq-down(sm) {
+        width: 100%;
+        padding-top: vw(30, $breakpoint-sm);
+        padding-left: vw(60, $breakpoint-sm);
+        margin: 0;
+      }
     }
 
     .c-gradationCircle {
@@ -90,22 +248,47 @@
       top: vw(-400);
       left: -30%;
       z-index: -1;
+      @include mq-down(sm) {
+        top: vw(-200, $breakpoint-sm);
+        left: vw(-350, $breakpoint-sm);
+      }
     }
 
     &--list {
       margin-top: vw(160);
+      @include mq-down(sm) {
+        margin-top: vw(80, $breakpoint-sm);
+      }
     }
 
     &--item {
       display: flex;
+      @include mq-down(sm) {
+        flex-direction: column;
+      }
       @include notfirst() {
         margin-top: vw(160);
+        @include mq-down(sm) {
+          margin-top: vw(50, $breakpoint-sm);
+        }
       }
       &:nth-child(odd) {
         flex-direction: row-reverse;
+        @include mq-down(sm) {
+          flex-direction: column;
+        }
         .top__works--imageArea {
-          padding-right: vw(60);
+          padding-right: vw(30);
           padding-left: 0;
+          @include mq-down(sm) {
+            order: 0;
+            padding: 0;
+          }
+        }
+      }
+      .top__works--textArea {
+        @include mq-down(sm) {
+          order: 1;
         }
       }
     }
@@ -113,57 +296,121 @@
     &--textArea,
     &--imageArea {
       width: 50%;
+      @include mq-down(sm) {
+        width: 100%;
+      }
     }
 
     &--textArea {
-      padding-left: vw(60);
+      position: relative;
       .c-heading {
-        margin-top: vw(80);
+        margin-top: vw(120);
+        @include mq-down(sm) {
+          margin-top: vw(20, $breakpoint-sm);
+        }
       }
 
       .c-text {
         margin-top: vw(20);
+        font-family: $fontFamilyMain;
+        @include mq-down(sm) {
+          margin-top: vw(5, $breakpoint-sm);
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin-top: vw(40);
+        margin-left: auto;
+        font-family: $fontFamilySub;
+        @include mq-down(sm) {
+          @include fz(16, 20, 500, $breakpoint-sm);
+        }
+      }
+    }
+
+    &--textAreaInner {
+      width: 55%;
+      margin-left: auto;
+      @include mq-down(sm) {
+        width: 100%;
       }
     }
 
     &--imageArea {
-      padding-left: vw(60);
+      padding-left: vw(30);
+      @include mq-down(sm) {
+        padding-left: 0;
+      }
+      img {
+        vertical-align: bottom;
+      }
+    }
+
+    &--number {
+      position: absolute;
+      left: vw(240);
+      z-index: -1;
+      display: block;
+      font-family: $fontFamilyMain;
+      opacity: 0.1;
+      transform: translate(-50%, -50%);
+      @include fz(240);
+      @include mq-down(sm) {
+        top: 40%;
+        left: vw(20, $breakpoint-sm);
+      }
     }
 
     &--btnWrap {
       display: flex;
-      justify-content: flex-end;
-      padding-right: 160px;
-    }
-
-    .c-btn {
-      margin-top: 160px;
-      margin-left: auto;
+      justify-content: space-between;
+      border-top: solid 1.5px $color-line;
+      @include mq-down(sm) {
+        padding-top: vw(10, $breakpoint-sm);
+        margin-top: vw(100, $breakpoint-sm);
+      }
     }
   }
 
   // contact
   &__contact {
     position: relative;
-    padding-top: vw(320);
+    padding-top: vw(140);
     padding-bottom: vw(160);
     overflow: hidden;
+    @include mq-down(sm) {
+      padding-top: vw(480);
+      padding-bottom: vw(720);
+    }
     &--inner {
       display: flex;
       justify-content: space-between;
+      @include mq-down(sm) {
+        flex-direction: column;
+        justify-content: center;
+      }
     }
     &--textArea {
       width: 50%;
-      padding-left: 60px;
-      margin-top: 160px;
+      padding-left: vw(60);
+      margin-top: vw(160);
       .c-text:last-child {
-        margin-top: 40px;
+        margin-top: vw(40);
+        @include mq-down(sm) {
+          margin-top: vw(30, $breakpoint-sm);
+        }
+      }
+      @include mq-down(sm) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: vw(20, $breakpoint-sm);
       }
     }
     .c-gradationCircle {
       position: absolute;
       right: 20%;
-      bottom: -135px;
+      bottom: vw(-135);
       z-index: -1;
       transform: skew(-10deg, -10deg);
     }

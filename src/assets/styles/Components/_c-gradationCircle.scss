@@ -4,17 +4,29 @@
 @use '../Foundation/mixin' as *;
 
 .c-gradationCircle {
-  width: vw(600);
-  height: vw(600);
+  width: vw(500);
+  height: vw(500);
   background: $gradient;
   filter: blur(25px);
   border-radius: 50%;
+  @include mq-down(sm) {
+    width: vw(250, $breakpoint-sm);
+    height: vw(250, $breakpoint-sm);
+  }
   &.-size-l {
     width: vw(1000);
     height: vw(1000);
+    @include mq-down(sm) {
+      width: vw(500, $breakpoint-sm);
+      height: vw(500, $breakpoint-sm);
+    }
   }
   &.-size-m {
     width: vw(700);
     height: vw(700);
+    @include mq-down(sm) {
+      width: vw(350, $breakpoint-sm);
+      height: vw(350, $breakpoint-sm);
+    }
   }
 }

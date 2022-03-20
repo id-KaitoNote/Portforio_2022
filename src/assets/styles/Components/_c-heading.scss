@@ -5,14 +5,31 @@
 
 .c-heading {
   font-family: $fontFamilyMain;
-  @include fz(120, 140, 400);
+  @include fz(160, 220, 300);
   @include tracking(50);
+  @include mq-down(sm) {
+    @include fz(60, 68, 300, $breakpoint-sm);
+  }
+  &.-size-xs {
+    @include fz(28, 36, 300);
+    @include tracking(100);
+    @include mq-down(sm) {
+      @include fz(20, 28, 300, $breakpoint-sm);
+    }
+  }
   &.-size-s {
-    @include fz(40, 48, 400);
+    @include fz(40, 48, 300);
+    @include tracking(200);
+  }
+  &.-size-m {
+    @include fz(80, 88, 300);
     @include tracking(200);
   }
   &.-size-l {
-    @include fz(140, 148, 400);
+    @include fz(140, 148, 300);
     @include tracking(100);
+    @include mq-down(sm) {
+      @include fz(60, 68, 300, $breakpoint-sm);
+    }
   }
 }

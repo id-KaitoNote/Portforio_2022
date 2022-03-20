@@ -7,8 +7,12 @@ var worksLists = (typeof worksLists === 'undefined')?'' : worksLists
 <% for (var i = 0;i < worksLists.length;i++){ %>
   <li class="top__works--item">
     <div class="top__works--textArea">
-      <h3 class="c-heading -size-s"><%- worksLists[i].title %></h3>
-      <p class="c-text -size-s"><%- worksLists[i].desc %></p>
+      <div class="top__works--textAreaInner">
+        <span class="top__works--number"><%- `0${i + 1}` %></span>
+        <h3 class="c-heading -size-xs"><%- worksLists[i].title %></h3>
+        <p class="c-text -size-xs"><%- worksLists[i].desc %></p>
+        <a href="/works/detail">Detail Here →</a>
+      </div>
     </div>
     <div class="top__works--imageArea">
       <img src="/assets/images/top/<%- worksLists[i].image %>" alt="">

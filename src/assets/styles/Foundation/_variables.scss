@@ -2,6 +2,7 @@
 
 // breakpoint
 // ----------------------------------------------------------
+
 $breakpoint-up: (
   'sm': 'screen and (min-width:768px)',
   'xmd': 'screen and (min-width:1280px)',
@@ -16,6 +17,8 @@ $breakpoint-down: (
   'lg': 'screen and (max-width:1760px)',
 ) !default;
 
+$breakpoint-sm: 375;
+
 // viewport
 // ----------------------------------------------------------
 $viewport: 1760;
@@ -23,7 +26,7 @@ $viewport: 1760;
 // font
 // ----------------------------------------------------------
 $fontFamilyMain: 'ivypresto-display', serif;
-$fontFamilySub: 'futura-pt,', sans-serif;
+$fontFamilySub: 'HK Grotesk', sans-serif;
 
 // color
 // ----------------------------------------------------------
@@ -33,13 +36,34 @@ $color-white: #fff;
 $color-line: #707070;
 
 $gradient: linear-gradient(
-  180deg,
-  rgba(255, 0, 0, 1) 0%,
-  rgba(255, 110, 0, 1) 32%,
-  rgba(255, 213, 0, 1) 59%,
-  rgba(255, 255, 255, 1) 100%
+  0deg,
+  hsl(248deg 100% 50%) 0%,
+  hsl(230deg 100% 64%) 5%,
+  hsl(226deg 100% 76%) 10%,
+  hsl(224deg 75% 87%) 20%,
+  hsl(207deg 65% 75%) 30%,
+  hsl(196deg 57% 60%) 40%,
+  hsl(185deg 100% 35%) 50%,
+  hsl(199deg 100% 33%) 60%,
+  hsl(213deg 100% 28%) 80%,
+  hsl(240deg 100% 18%) 100%
 );
+
 $gradient-btn: linear-gradient(
+  90deg,
+  hsl(248deg 100% 50%) 0%,
+  hsl(230deg 100% 64%) 5%,
+  hsl(226deg 100% 76%) 10%,
+  hsl(224deg 75% 87%) 20%,
+  hsl(207deg 65% 75%) 30%,
+  hsl(196deg 57% 60%) 40%,
+  hsl(185deg 100% 35%) 50%,
+  hsl(199deg 100% 33%) 60%,
+  hsl(213deg 100% 28%) 80%,
+  hsl(240deg 100% 18%) 100%
+);
+
+$gradient-btn-light: linear-gradient(
   90deg,
   rgba(255, 0, 0, 1) 0%,
   rgba(255, 110, 0, 1) 32%,
@@ -49,7 +73,7 @@ $gradient-btn: linear-gradient(
 
 // headerHeight
 // ----------------------------------------------------------
-$headerHeight: 160;
+$headerHeight: 100;
 
 // 汎用easing
 // ----------------------------------------------------------

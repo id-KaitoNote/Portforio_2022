@@ -8,15 +8,32 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  @include mq-down(sm) {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    order: 1;
+  }
   span {
     display: block;
-    width: 15px;
-    height: 15px;
+    width: vw(15);
+    height: vw(15);
     margin-left: auto;
     border: 1px solid $color-white;
     border-radius: 50%;
     @include notfirst() {
       margin-top: 40px;
+      @include mq-down(sm) {
+        margin-top: 0;
+        margin-left: vw(20, $breakpoint-sm);
+      }
+    }
+    @include mq-down(sm) {
+      width: vw(10, $breakpoint-sm);
+      height: vw(10, $breakpoint-sm);
     }
     &[data-location='true'] {
       background: $color-white;
