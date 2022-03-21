@@ -1,6 +1,6 @@
 {
   "siteName": "KAITO NOTE Portforio",
   "siteDomain": "https://example.com",
-  "sitePath": "/",
+  "sitePath": "./",
   "themeColor": "#000"
 }

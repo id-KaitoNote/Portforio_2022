@@ -122,7 +122,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-# dist
+dist
 
 # Gatsby files
 .cache/
@@ -131,7 +131,7 @@ out
 # public
 
 # vuepress build output
-# .vuepress/dist
+.vuepress/dist
 
 # vuepress v2.x temp and cache directory
 .temp
@@ -196,7 +196,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# dist
-# dist-production
+dist
+dist-production
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows
